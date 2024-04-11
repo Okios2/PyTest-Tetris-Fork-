@@ -12,4 +12,4 @@ FROM builder AS tester
 
 COPY --from=builder /PyTest-Tetris /PyTest-Tetris
 
-CMD ["bash"]
+CMD ["bash"] 
