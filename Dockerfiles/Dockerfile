@@ -16,7 +16,7 @@ RUN pip install setuptools
 
 CMD ["bash"]
 
-CMD ["pwd, ls"]
+RUN ["pwd, ls"]
 
 CMD ["python setup.py bdist_wheel"]
  
