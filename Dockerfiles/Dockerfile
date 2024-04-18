@@ -12,5 +12,7 @@ RUN pip install wheel
 
 CMD ["bash"]
 
+CMD ["ls"]
+
 CMD ["python setup.py bdist_wheel"]
  
