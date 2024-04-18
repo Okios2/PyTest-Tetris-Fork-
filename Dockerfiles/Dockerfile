@@ -8,8 +8,8 @@ RUN pip install pytest
 
 RUN pip install pygame
 
-FROM builder AS tester
-
-COPY --from=builder /PyTest-Tetris /PyTest-Tetris
+RUN pip install wheel
 
 CMD ["bash"]
+
+CMD ["python setup.py sdist bdist_wheel"]
