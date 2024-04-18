@@ -12,7 +12,6 @@ fi
 docker ps -a
 docker images
 
-cd Snake_files
 if [ ! -d "log" ]; then
   mkdir log
 fi
