@@ -12,4 +12,4 @@ RUN pip install wheel
 
 CMD ["bash"]
 
-CMD ["python setup.py sdist bdist_wheel"]
+CMD ["python setup.py bdist_wheel"]
