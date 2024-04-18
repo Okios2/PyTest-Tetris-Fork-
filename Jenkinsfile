@@ -57,8 +57,12 @@ pipeline {
         stage('Publish') {
             steps {
                 echo 'Publishing..'
+                withCredentials([usernamePassword(credentialsId: 'Docker-Hub-Credentials', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
                 sh '''
-
+                docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}
+                docker build -t tetrisSatyammittal:latest -f ./Dockerfiles/Dockerfile .
+                docker tag okios/tetrisSatyammittal:latest okios/tetrisSatyammittal:1.0.0
+                docker push okios/tetrisSatyammittal:1.0.0
                 '''
             }
         }  
