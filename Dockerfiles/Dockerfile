@@ -18,5 +18,5 @@ CMD ["bash"]
 
 RUN "ls"
 
-CMD ["python setup.py bdist_wheel"]
+CMD ["python2 setup.py bdist_wheel"]
  
