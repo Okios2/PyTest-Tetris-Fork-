@@ -2,7 +2,7 @@ FROM python:2
 
 RUN git clone https://github.com/Okios2/PyTest-Tetris-Fork-.git
 
-RUN "pwd, ls"
+RUN "ls"
 
 WORKDIR ./PyTest-Tetris
 
