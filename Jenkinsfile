@@ -61,7 +61,7 @@ pipeline {
                                     sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                 }
                 sh '''
-                docker build -t tetris_satyammittal:latest -f ./Dockerfiles/Dockerfile .
+                docker build -t okios/tetris_satyammittal:latest -f ./Dockerfiles/Dockerfile .
                 docker tag okios/tetris_satyammittal:latest okios/tetris_satyammittal:1.0.0
                 docker push okios/tetris_satyammittal:1.0.0
                 '''
