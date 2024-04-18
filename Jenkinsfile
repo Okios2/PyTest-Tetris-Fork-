@@ -58,7 +58,7 @@ pipeline {
             steps {
                 echo 'Publishing..'
                 withCredentials([usernamePassword(credentialsId: 'DockerCredentials', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-                                    sh'docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}'
+                                    sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                 }
                 sh '''
                 docker build -t tetrisSatyammittal:latest -f ./Dockerfiles/Dockerfile .
