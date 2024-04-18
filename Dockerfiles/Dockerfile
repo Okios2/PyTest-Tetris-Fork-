@@ -1,4 +1,4 @@
-FROM python:2 AS builder
+FROM python:2
 
 RUN git clone https://github.com/satyammittal/PyTest-Tetris.git
 
