@@ -13,7 +13,7 @@ RUN pip install pygame
 RUN pip install wheel
 
 RUN pip install setuptools
-RUN pip install distutils
+RUN sudo apt-get install python2-distutils
 
 CMD ["bash"]
 
