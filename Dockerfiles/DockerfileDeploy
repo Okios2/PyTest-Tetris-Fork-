@@ -10,4 +10,4 @@ RUN pip install pygame
 
 CMD ["bash"]
 
-CMD ["python", "./mypkg/tetris.py"]
+#CMD ["python", "./mypkg/tetris.py"]
