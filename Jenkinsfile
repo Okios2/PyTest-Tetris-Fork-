@@ -28,7 +28,6 @@ pipeline {
                 sh ''' 
                 ls
                 docker build -t tetrisbuild:latest -f ./Dockerfiles/Dockerfile .
-                docker run --name tetrisbuild -v ./artifacts:/dist tetrisbuild:latest
                 docker logs tetrisbuild > ./log/log_builder.txt
                 '''
             }
