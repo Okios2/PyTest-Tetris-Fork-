@@ -10,9 +10,10 @@ RUN pip install pygame
 
 RUN pip install wheel
 
+RUN pip install setuptools
+RUN pip install distutils
+
 CMD ["bash"]
 
-CMD ["ls"]
-
-#CMD ["python setup.py bdist_wheel"]
+CMD ["python setup.py bdist_wheel"]
  
