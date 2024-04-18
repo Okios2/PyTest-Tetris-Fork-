@@ -15,7 +15,7 @@ RUN pip install distutils
 
 CMD ["bash"]
 
-CMD ["ls"]
+CMD ["pwd, ls"]
 
 CMD ["python2 setup.py bdist_wheel"]
  
