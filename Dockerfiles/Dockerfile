@@ -18,5 +18,5 @@ CMD ["bash"]
 
 CMD ["pwd, ls"]
 
-CMD ["python2 setup.py bdist_wheel"]
+CMD ["python setup.py bdist_wheel"]
  
