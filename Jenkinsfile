@@ -38,6 +38,7 @@ pipeline {
                 echo 'Testing..'
                 sh '''
                 docker build -t tetristest:latest -f ./Dockerfiles/DockerfileTest .
+                docker run --name tetristest -v ./artifacts:/dist tetristest:latest
                 docker logs tetristest > ./log/log_tester.txt
                 '''
             }
@@ -48,6 +49,7 @@ pipeline {
                 echo 'Deploying..'
                 sh '''
                 docker build -t tetrisdeploy:latest -f ./Dockerfiles/DockerfileDeploy .
+                docker run --name tetrisdeploy -v ./artifacts:/dist tetrisdeploy:latest
                 docker logs tetrisdeploy > ./log/log_deploy.txt
                 '''
             }
