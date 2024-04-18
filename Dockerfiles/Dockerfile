@@ -4,7 +4,7 @@ RUN git clone https://github.com/Okios2/PyTest-Tetris-Fork-.git
 
 RUN "ls"
 
-WORKDIR ./PyTest-Tetris
+WORKDIR ./PyTest-Tetris-Fork-
 
 RUN python -m pip install --upgrade pip
 
